@@ -1,124 +1,97 @@
-/* --- BIẾN MÀU SẮC MỚI (PASTEL VIBE) --- */
+/* --- BẢNG MÀU CẦU VỒNG (RAINBOW PALETTE) --- */
 :root {
-    --primary-blue: #A2D2FF;
-    --primary-yellow: #FFD6A5;
-    --soft-mint: #CAFFBF;
-    --soft-pink: #FFC8DD;
-    --text-dark: #2B2D42;
-    --text-light: #8D99AE;
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --color-1: #FF9AA2; /* Hồng dâu */
+    --color-2: #FFB7B2; /* Cam san hô */
+    --color-3: #FFDAC1; /* Vàng nắng */
+    --color-4: #E2F0CB; /* Xanh mạ */
+    --color-5: #B5EAD7; /* Xanh bạc hà */
+    --color-6: #C7CEEA; /* Tím oải hương */
+    
+    --primary-blue: #4A90E2;
     --white: #ffffff;
-    --bg-light: #FDFFFC;
+    --text-dark: #444;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', 'Segoe UI', sans-serif; /* Font chữ tròn trịa, thân thiện */
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
-    line-height: 1.8;
+    background: #fdfdfd;
     color: var(--text-dark);
-    background-color: var(--bg-light);
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 25px;
+/* --- HERO SECTION: MÀU LOANG RỰC RỠ --- */
+.hero {
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    padding: 80px 0;
+    border-radius: 0 0 50px 50px; /* Bo góc dưới tạo cảm giác mềm mại */
+    color: #2c3e50;
 }
 
-/* --- HEADER NÂNG CẤP --- */
-header {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px); /* Hiệu ứng kính mờ hiện đại */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    padding: 0.8rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.hero h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.nav-links a.ai-link {
-    background: var(--primary-blue);
-    color: white !important;
-    border: none;
-    border-radius: 12px;
-    padding: 8px 20px;
-}
+/* --- HÀNH TRÌNH 4 MÀU BIỆT LẬP --- */
+/* Mỗi thẻ Card sẽ có một màu nền nhẹ khác nhau để dễ phân biệt */
 
-/* --- CARDS & JOURNEY --- */
+.journey-grid .card:nth-child(1) { background-color: #FFF0F0; border-top: 6px solid var(--color-1); }
+.journey-grid .card:nth-child(2) { background-color: #FFF9F0; border-top: 6px solid var(--color-3); }
+.journey-grid .card:nth-child(3) { background-color: #F0FFF4; border-top: 6px solid var(--color-5); }
+.journey-grid .card:nth-child(4) { background-color: #F0F4FF; border-top: 6px solid var(--color-6); }
+
 .card {
-    background: var(--white);
+    border-radius: 30px;
     padding: 30px;
-    border-radius: 24px; /* Bo góc tròn hơn cho teen */
-    border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.1);
+    transform: scale(1.05);
 }
 
-.card img {
-    border-radius: 16px;
-    margin-bottom: 20px;
-    object-fit: cover; /* Chống méo ảnh */
+/* --- GÓC TÂM SỰ AI: NỔI BẬT --- */
+.ai-section {
+    background: linear-gradient(to bottom, #ffffff, #f0f7ff);
+    padding: 60px 0;
 }
 
-/* --- GÓC TÂM SỰ AI (CHAT UI) --- */
 .ai-container {
-    background: var(--white);
-    border-radius: 30px;
-    padding: 40px;
-    border: 2px dashed var(--primary-blue); /* Đường viền đứt đoạn nhẹ nhàng */
-}
-
-.chat-box {
-    background: #F8F9FA;
-    border-radius: 20px;
-    padding: 20px;
-    min-height: 200px;
-    margin-bottom: 20px;
-    overflow-y: auto;
+    background: white;
+    border: 3px solid #e0e0e0;
+    border-image: linear-gradient(45deg, #f093fb 0%, #f5576c 100%) 1; /* Viền gradient */
+    border-radius: 25px;
 }
 
 .chat-bubble.bot {
-    background: var(--soft-mint);
-    border-radius: 20px 20px 20px 5px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.02);
+    background: linear-gradient(135deg, #E2F0CB 0%, #B5EAD7 100%);
+    color: #2d5a27;
 }
 
 .chat-bubble.user {
-    background: var(--primary-blue);
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
     color: white;
-    border-radius: 20px 20px 5px 20px;
 }
 
-textarea#userInput {
-    border: 2px solid #EEE;
-    border-radius: 15px;
-    padding: 15px;
-    transition: 0.3s;
+/* --- FOOTER: ĐẬM ĐÀ VÀ SẮC NÉT --- */
+footer {
+    background: #4A90E2;
+    background: linear-gradient(45deg, #2c3e50, #4A90E2);
+    color: white;
+    padding: 60px 0;
+    margin-top: 50px;
 }
 
-textarea#userInput:focus {
-    border-color: var(--primary-blue);
-    outline: none;
-}
-
-/* --- FOOTER (SỬA LỖI MÉO ẢNH) --- */
-.footer-item img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover; /* Đảm bảo ảnh luôn đẹp, không bị kéo dãn */
-    border-radius: 20px;
-}
-
-/* Hiệu ứng mượt mà khi di chuyển giữa các phần */
-html {
-    scroll-behavior: smooth;
+.footer-item h4 {
+    color: var(--color-3); /* Tiêu đề footer màu vàng nổi bật */
 }
