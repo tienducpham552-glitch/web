@@ -1,200 +1,124 @@
-/* --- THIẾT LẬP CƠ BẢN (RESET & VARIABLES) --- */
+/* --- BIẾN MÀU SẮC MỚI (PASTEL VIBE) --- */
 :root {
-    --primary-blue: #4A90E2; 
-    --primary-yellow: #F5A623;
-    --soft-mint: #E8F5E9; 
-    --text-dark: #333;
-    --text-light: #666;
-    --white: #fff;
-    --ai-bg: #F0F4F8;
-    --purple-accent: #9B59B6;
+    --primary-blue: #A2D2FF;
+    --primary-yellow: #FFD6A5;
+    --soft-mint: #CAFFBF;
+    --soft-pink: #FFC8DD;
+    --text-dark: #2B2D42;
+    --text-light: #8D99AE;
+    --white: #ffffff;
+    --bg-light: #FDFFFC;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Quicksand', 'Segoe UI', sans-serif; /* Font chữ tròn trịa, thân thiện */
 }
 
 body {
-    line-height: 1.6;
+    line-height: 1.8;
     color: var(--text-dark);
-    background-color: #f9f9f9;
+    background-color: var(--bg-light);
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
-/* --- HEADER & NAVIGATION --- */
+/* --- HEADER NÂNG CẤP --- */
 header {
-    background: var(--white);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Hiệu ứng kính mờ hiện đại */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-}   
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-dark);
-    margin-left: 20px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--primary-blue);
 }
 
 .nav-links a.ai-link {
-    color: var(--primary-blue);
-    font-weight: bold;
-    border: 2px solid var(--primary-blue);
-    padding: 5px 15px;
-    border-radius: 20px;
-}
-
-.nav-links a.ai-link:hover {
     background: var(--primary-blue);
-    color: white;
+    color: white !important;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 20px;
 }
 
-/* --- HERO SECTION --- */
-.hero {
-    background: linear-gradient(135deg, var(--soft-mint) 0%, #ffffff 100%);
-    padding: 60px 0;
-    text-align: center;
-}
-
-.hero h1 {
-    color: var(--primary-blue);
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero-img-placeholder {
-    width: 100%;
-    max-width: 800px;
-    height: 400px;
-    background-color: #ddd;
-    margin: 0 auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.hero-img-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* --- MISSION SECTION --- */
-.mission {
-    padding: 60px 0;
-    background-color: var(--white);
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: var(--primary-blue);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.mission-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-/* --- JOURNEY SECTION --- */
-.journey {
-    padding: 60px 0;
-    background-color: var(--soft-mint);
-}
-
-.journey-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
+/* --- CARDS & JOURNEY --- */
 .card {
     background: var(--white);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    border-top: 5px solid var(--primary-blue);
-    text-align: center;
+    padding: 30px;
+    border-radius: 24px; /* Bo góc tròn hơn cho teen */
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.1);
 }
 
 .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    object-fit: cover; /* Chống méo ảnh */
 }
 
-/* --- AI CHATBOT SECTION --- */
-.ai-section {
-    padding: 60px 0;
-    background: linear-gradient(to right, #f8f9fa, #e9ecef);
-}
-
+/* --- GÓC TÂM SỰ AI (CHAT UI) --- */
 .ai-container {
     background: var(--white);
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 40px;
-    border: 2px solid var(--primary-blue);
-    margin-bottom: 40px;
+    border: 2px dashed var(--primary-blue); /* Đường viền đứt đoạn nhẹ nhàng */
 }
 
-.chat-bubble {
-    padding: 10px 14px;
-    border-radius: 16px;
-    margin-bottom: 8px;
-    max-width: 75%;
-    font-size: 14px;
-}
-
-.chat-bubble.user {
-    background: #dbeafe;
-    margin-left: auto;
+.chat-box {
+    background: #F8F9FA;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 200px;
+    margin-bottom: 20px;
+    overflow-y: auto;
 }
 
 .chat-bubble.bot {
-    background: #e8f5e9;
-    margin-right: auto;
+    background: var(--soft-mint);
+    border-radius: 20px 20px 20px 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.02);
 }
 
-/* Các thuộc tính khác bạn có thể copy nguyên từ thẻ <style> cũ qua đây */
+.chat-bubble.user {
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 20px 20px 5px 20px;
+}
+
+textarea#userInput {
+    border: 2px solid #EEE;
+    border-radius: 15px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+textarea#userInput:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+
+/* --- FOOTER (SỬA LỖI MÉO ẢNH) --- */
+.footer-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Đảm bảo ảnh luôn đẹp, không bị kéo dãn */
+    border-radius: 20px;
+}
+
+/* Hiệu ứng mượt mà khi di chuyển giữa các phần */
+html {
+    scroll-behavior: smooth;
+}
