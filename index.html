@@ -22,7 +22,7 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="https://raw.githubusercontent.com/TÊN_GITHUB_CỦA_BẠN/TEN_DU_AN_CUA_BẠN/main/INNERLY/Logo.jpg" alt="Logo Innerly" style="height: 80px; width: auto;">
+                    <img id="img-logo" src="" alt="Logo Innerly" style="height: 80px; width: auto;">
                 </div>
                 <div class="nav-links">
                     <a href="#">TRANG CHỦ</a>
@@ -40,7 +40,7 @@
             <h2>Bộ sản phẩm cân bằng cảm xúc học đường<br>Nơi mỗi cảm xúc của tuổi teen đều được trân trọng và lắng nghe</h2>
             
             <div class="hero-img-placeholder">
-                <img src="https://raw.githubusercontent.com/TÊN_GITHUB_CỦA_BẠN/TEN_DU_AN_CUA_BẠN/main/INNERLY/Anh mo dau.png" alt="Học sinh trải nghiệm Innerly">
+                <img id="img-hero" src="" alt="Học sinh trải nghiệm Innerly">
             </div>
         </div>
     </section>
@@ -68,7 +68,7 @@
             <div class="journey-grid">
                 <div class="card">
                     <h3>1. CHẠM</h3>
-                    <img src="https://raw.githubusercontent.com/TÊN_GITHUB_CỦA_BẠN/TEN_DU_AN_CUA_BẠN/main/INNERLY/1. Cham.png" alt="Hoạt động Chạm">
+                    <img id="img-journey-1" src="" alt="Hoạt động Chạm">
                     <span class="quote">“Mình đang cảm thấy gì vậy?”</span>
                     <div class="card-content">
                         <p><strong>Hoạt động:</strong> Teen chọn thẻ cảm xúc, viết ra suy nghĩ bằng giấy stick và bút chì của INNERLY – chỉ để hiểu mình hơn.</p>
@@ -78,7 +78,7 @@
 
                 <div class="card">
                     <h3>2. GIẢI TỎA</h3>
-                    <img src="https://raw.githubusercontent.com/TÊN_GITHUB_CỦA_BẠN/TEN_DU_AN_CUA_BẠN/main/INNERLY/2. Giai toa.png" alt="Hoạt động Giải tỏa">
+                    <img id="img-journey-2" src="" alt="Hoạt động Giải tỏa">
                     <span class="quote">“Mình không cần giữ tất cả trong lòng.”</span>
                     <div class="card-content">
                         <p><strong>Hoạt động:</strong> Viết điều đang nặng lòng và đặt vào Hộp ghi cảm xúc. Stress ball và kẹo nhỏ giúp cơ thể dịu lại.</p>
@@ -88,7 +88,7 @@
 
                 <div class="card">
                     <h3>3. ỔN ĐỊNH</h3>
-                    <img src="https://raw.githubusercontent.com/TÊN_GITHUB_CỦA_BẠN/TEN_DU_AN_CUA_BẠN/main/INNERLY/3. On dinh.png" alt="Hoạt động Ổn định">
+                    <img id="img-journey-3" src="" alt="Hoạt động Ổn định">
                     <span class="quote">“Mình đang dần ổn hơn rồi.”</span>
                     <div class="card-content">
                         <p><strong>Hoạt động:</strong> Teen nhìn lại cảm xúc đã viết, sắp xếp lại suy nghĩ và được dẫn dắt nhẹ nhàng qua landing page.</p>
@@ -98,7 +98,7 @@
 
                 <div class="card">
                     <h3>4. PHÁT TRIỂN</h3>
-                    <img src="https://raw.githubusercontent.com/TÊN_GITHUB_CỦA_BẠN/TEN_DU_AN_CUA_BẠN/main/INNERLY/4. Phat trien.png" alt="Hoạt động Phát triển">
+                    <img id="img-journey-4" src="" alt="Hoạt động Phát triển">
                     <span class="quote">“Mình học cách chăm sóc cảm xúc mỗi ngày.”</span>
                     <div class="card-content">
                         <p><strong>Hoạt động:</strong> Hình thành thói quen viết – giải tỏa – tự xoa dịu và kết nối với cộng đồng.</p>
@@ -140,15 +140,12 @@
                 <div class="ai-feature-card">
                     <h3><i class="fas fa-book-open"></i> Từ Điển Cảm Xúc ✨</h3>
                     <p class="text-sm mb-4" style="color:#666; font-size:0.9rem;">Cảm xúc của bạn khó gọi tên? Hãy mô tả nó, AI sẽ đặt cho bạn một cái tên thật hay.</p>
-                    
                     <div class="input-group">
                         <input type="text" id="emotionDesc" placeholder="VD: Vừa vui mà lại vừa lo...">
                     </div>
-                    
                     <button onclick="defineEmotion()" id="btnDefine" class="chat-btn secondary" style="width:100%; justify-content:center;">
                         <i class="fas fa-magic"></i> Đặt tên cảm xúc
                     </button>
-
                     <div id="resultDefine" class="mt-4 hidden" style="margin-top:15px; background:#f0f8ff; padding:15px; border-radius:8px; display:none;">
                         <strong id="emotionTitle" style="color:var(--primary-blue); display:block; font-size:1.1rem;"></strong>
                         <p id="emotionDef" style="font-size:0.9rem; margin-top:5px;"></p>
@@ -158,7 +155,6 @@
                 <div class="ai-feature-card">
                     <h3><i class="fas fa-lightbulb"></i> Gợi Ý Giải Tỏa ✨</h3>
                     <p class="text-sm mb-4" style="color:#666; font-size:0.9rem;">Bạn đang cảm thấy thế nào? Innerly sẽ gợi ý một việc làm nhỏ để bạn thấy khá hơn.</p>
-                    
                     <div class="input-group">
                         <select id="moodSelect">
                             <option value="Căng thẳng">Căng thẳng / Stress</option>
@@ -168,11 +164,9 @@
                             <option value="Mệt mỏi">Mệt mỏi / Cạn năng lượng</option>
                         </select>
                     </div>
-                    
                     <button onclick="suggestActivity()" id="btnSuggest" class="chat-btn secondary" style="width:100%; justify-content:center;">
                         <i class="fas fa-hand-sparkles"></i> Tìm hoạt động
                     </button>
-
                     <div id="resultSuggest" class="mt-4 hidden" style="margin-top:15px; background:#fff8e1; padding:15px; border-radius:8px; display:none;">
                         <strong style="color:var(--primary-yellow); display:block;">💡 Gợi ý cho bạn:</strong>
                         <p id="activityText" style="font-size:0.9rem; margin-top:5px;"></p>
@@ -187,11 +181,9 @@
             <h2 class="section-title">Câu Chuyện Của Chúng Tôi</h2>
             <div class="history-content">
                 <h3>Lịch Sử</h3>
-                <p>INNERLY là một bộ sản phẩm giúp tụi mình hiểu cảm xúc của chính mình hơn, nhất là những lúc áp lực học hành hay rối bời không biết nói với ai. Chỉ từ những công cụ rất nhỏ, INNERLY giúp xả bớt cảm xúc, bình tĩnh lại và cảm thấy mình không hề cô đơn trong quá trình lớn lên.</p>
-                
+                <p>INNERLY là một bộ sản phẩm giúp tụi mình hiểu cảm xúc của chính mình hơn...</p>
                 <h3 style="margin-top: 20px;">Thành tựu hiện tại</h3>
-                <p>Từ những ý tưởng rất nhỏ xoay quanh cảm xúc học đường, INNERLY đã dần hình thành một bộ sản phẩm hoàn chỉnh, được thiết kế riêng cho tuổi teen. Chúng tôi đã xây dựng thành công bộ sản phẩm cân bằng cảm xúc học đường INNERLY, bao gồm landing page, hộp ghi cảm xúc, bộ thẻ cảm xúc, stress ball và các vật dụng hỗ trợ đi kèm.</p>
-                <p style="margin-top: 10px;"><em>"Quan trọng hơn cả, INNERLY không chỉ là một bộ sản phẩm, mà đang dần trở thành một không gian tinh thần an toàn, nơi cảm xúc của tuổi teen được nhìn nhận nghiêm túc và tôn trọng."</em></p>
+                <p>Từ những ý tưởng rất nhỏ xoay quanh cảm xúc học đường, INNERLY đã dần hình thành một bộ sản phẩm hoàn chỉnh...</p>
             </div>
         </div>
     </section>
@@ -201,19 +193,17 @@
             <div class="footer-grid">
                 <div class="footer-item">
                     <h4>INNERLY trong đời sống học đường</h4>
-                    <img src="https://raw.githubusercontent.com/TÊN_GITHUB_CỦA_BẠN/TEN_DU_AN_CUA_BẠN/main/INNERLY/Doi song.png" alt="Đời sống học đường">
-                    <p>Những công cụ nhỏ giúp tuổi teen chạm vào cảm xúc của mình, giải tỏa nhẹ nhàng và cảm thấy không còn một mình trong quá trình lớn lên.</p>
+                    <img id="img-footer-life" src="" alt="Đời sống học đường">
+                    <p>Những công cụ nhỏ giúp tuổi teen chạm vào cảm xúc của mình.</p>
                 </div>
                 <div class="footer-item">
                     <h4>Bộ sản phẩm INNERLY</h4>
-                    <img src="https://raw.githubusercontent.com/TÊN_GITHUB_CỦA_BẠN/TEN_DU_AN_CUA_BẠN/main/INNERLY/San pham.png" alt="Bộ sản phẩm">
-                    <p>Được thiết kế gần gũi, dễ sử dụng mỗi ngày – đồng hành cùng tuổi teen trong hành trình hiểu cảm xúc và cân bằng tinh thần từ những điều rất nhỏ.</p>
+                    <img id="img-footer-product" src="" alt="Bộ sản phẩm">
+                    <p>Đồng hành cùng tuổi teen trong hành trình hiểu cảm xúc.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-
-</body>
+    <script src="images.js"></script> <script src="script.js"></script> </body>
 </html>
