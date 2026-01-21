@@ -1,10 +1,10 @@
 // --- CẤU HÌNH ĐƯỜNG DẪN ẢNH TẠI ĐÂY ---
 
 // 1. Thay tên tài khoản GitHub của bạn vào đây
-const GITHUB_USERNAME = "TÊN_CỦA_BẠN"; 
+const GITHUB_USERNAME = "tienducpham552-glitch"; 
 
 // 2. Thay tên Dự án (Repository) của bạn vào đây
-const REPO_NAME = "TÊN_DỰ_ÁN"; 
+const REPO_NAME = "web"; 
 
 // 3. Tự động tạo đường dẫn gốc (Không cần sửa dòng này)
 const BASE_URL = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${REPO_NAME}/main/INNERLY/`;
